@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - UserPage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">   <!--google fonts-->
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+
+
+  <!--E gjitha kjo eshte e bere copy paste pre non user login services e e bere paste ketu perveq navbarit i cili eshte i modifikuar me droplist
+  dhe eshte i ndertuar nga nje funksion qe te merr te dhena ne local storage dhe te vendosura ne nav bar si psh username display  -->
+
+    <!-- NavBar starts -->
+  <nav class="navbar">
+    <div class="navbar-container">
+        <h1 class="navbar-brand"> <a href="../userPage.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+        <ul class="navbar-menu">
+            <li><a href="../userPage.html">Home</a></li>
+            <li><a href="AboutUP.html">About</a></li>
+            <li><a href="ServicesUP.html" style="font-weight: bolder; font-size: larger;">Services</a></li>
+            <li><a href="ContactUP.html" >Contact</a></li>
+              <div class="sidebar">
+                <div class="dropdown">
+                  <button class="dropdown-button" id="userInfo"><span id="usernameDisplay"></span></button>
+                  <div class="dropdown-content">
+                      <a href="Budgets.html">Budgets</a>
+                      <a href="Expenses.html">Expenses</a>
+                      <a href="Savings.html">Savings</a>
+                      <a href="MyAcc.html">Account</a>
+                      <a  id="logout-button">Log Out</a>
+                  </div>
+              </div>     
+         </div>
+        </div>
+   </nav>
+   <!-- end navbar  -->
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!-- headeri  -->
+<div class="header">
+    <h1>Our Services</h1>
+    <p>Explore how MySavingsPal empowers you to achieve your financial goals.</p>
+  </div>
+
+  <div class="services-container">
+    <div class="service-card">
+      <i class="fas fa-calculator"></i>
+      <h3>Budget Planning</h3>
+      <p>Plan and manage your budget effortlessly with our intuitive tools.</p>
+     <a href="Budgets.html"> <button>Learn More</button></a>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-piggy-bank"></i>
+      <h3>Savings Tracking</h3>
+      <p>Track your savings progress and set achievable goals.</p>
+    <a href="Savings.html"><button>Get Started</button></a>  
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-chart-pie"></i>
+      <h3>Expense Analysis</h3>
+      <p>Analyze and categorize your expenses for smarter spending.</p>
+    <a href="Expenses.html"><button>Explore Now</button></a>  
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Start Your Financial Journey Today</h2>
+    <p>Join thousands of students who are taking control of their finances with MySavingsPal.</p>
+    <a href="Budgets.html"><button>See Your Budgets</button></a>
+  </div>
+  <!-- end content  -->
+
+
+  <!-- footer -->
+  <footer>
+    &copy; 2025 MySavingsPal. All rights reserved.
+  </footer>
+
+
+
+
+    <script src="Js/services.js"></script>
+</body>
+</html>

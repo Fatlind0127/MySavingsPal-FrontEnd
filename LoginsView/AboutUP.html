@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - User Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">   <!--google fonts-->
+    <link rel="stylesheet" href="css/aboutus.css">
+
+</head>
+<body>
+
+   <!--E gjitha kjo eshte e bere copy paste pre non user login about e e bere paste ketu perveq navbarit i cili eshte i modifikuar me droplist
+  dhe eshte i ndertuar nga nje funksion qe te merr te dhena ne local storage dhe te vendosura ne nav bar si psh username display  -->
+
+    <!-- NavBar starts -->
+  <nav class="navbar">
+    <div class="navbar-container">
+        <h1 class="navbar-brand"> <a href="../userPage.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+        <ul class="navbar-menu">
+            <li><a href="../userPage.html">Home</a></li>
+            <li><a href="AboutUP.html" style="font-weight: bolder; font-size: larger;">About</a></li>
+            <li><a href="ServicesUP.html" >Services</a></li>
+            <li><a href="ContactUP.html" >Contact</a></li>
+              <div class="sidebar">
+                <div class="dropdown">
+                  <button class="dropdown-button" id="userInfo"><span id="usernameDisplay"></span></button>
+                  <div class="dropdown-content">
+                      <a href="Budgets.html">Budgets</a>
+                      <a href="Expenses.html">Expenses</a>
+                      <a href="Savings.html">Savings</a>
+                      <a href="MyAcc.html">Account</a>
+                      <a  id="logout-button">Log Out</a>
+                  </div>
+              </div>     
+         </div>
+        </div>
+   </nav>
+   <br> <br> <br><br><br><br><br>
+
+<header id="about-alt-header">
+    <div class="header-content">
+      <h1>About My Savings Pal</h1>
+      <p>Empowering students to save smart and manage better.</p>
+    </div>
+  </header>
+
+  <section id="about-alt-main">
+    <div class="about-alt-wrapper">
+      <div class="about-alt-text">
+        <h2>Who Are We?</h2>
+        <p>
+          My Savings Pal is a platform dedicated to helping students achieve financial independence.
+          By offering tools for budgeting, tracking expenses, and managing savings, we aim to empower
+          individuals to make better financial decisions.
+        </p>
+        <p>
+          Our mission is to inspire a <span>smart saving culture</span> among students
+          and provide them with the resources they need to build a secure financial future.
+        </p>
+      </div>
+      <div class="about-alt-image">
+        <img src="../images/aboutus.png" alt="About Us Image">
+      </div>
+    </div>
+  </section>
+
+  <section id="about-alt-features">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="../images/budgetabt.png" alt="Budget Icon">
+        <h3>Budget Management</h3>
+        <p>Track your spending and manage your budget effortlessly with our intuitive tools.</p>
+      </div>
+      <div class="feature-card">
+        <img src="../images/smartsavings.png" alt="Savings Icon">
+        <h3>Smart Savings</h3>
+        <p>Set savings goals and monitor progress to achieve financial success.</p>
+      </div>
+      <div class="feature-card">
+        <img src="../images/student.png" alt="Support Icon">
+        <h3>Student-Centric Support</h3>
+        <p>Resources tailored specifically to the needs of students.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="about-alt-footer">
+    <p>© 2025 My SavingsPal. All rights reserved.</p>
+  </footer>
+    
+
+   <script src="Js/aboutus.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Calculate - MySavingPal</title>
+    <link rel="stylesheet" href="css/Calculate.css">
+</head>
+<body>
+     <!-- NavBar starts -->
+     <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-brand"> <a href="index.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+            <ul class="navbar-menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="Calculate.html" style="font-weight: bolder; font-size: 130%;">Calculate</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <a href="login.html" id="loginstyle">Login</a>
+                 <a href="register.html"id="registerstyle">Register</a>
+            </ul>
+            <button class="menu-toggle">☰</button> <!-- Mobile Menu Toggle -->
+        </div>
+    </nav>
+    <br>
+  <script src="js/Calculate.js"></script>
+ <!-- NavBar Ends -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>  <!-- keto break lines i kam perdorur shpesh sepse ma shpejtonte 
+                                                   punen qe kisha per ta ndertuar faqen nese eshte e nevojshme mund ta dizajnoj edhe prej css-->
+
+
+
+    <!-- calculation section -->
+    <div class="container">
+        <div class="calculator-container">
+            <!-- Calculation Form -->
+            <div class="calculator">
+                <h1 style="color:#008080">Budget Preview Calculator</h1>
+                <p style="margin-top:-15px;">Use this tool to get a preview of how our platform can help manage your budget.</p> <br> 
+                
+                <div class="input-group">
+                    <label for="income">Monthly Income:</label> <br> 
+                    <input type="number" id="income" placeholder="Enter your income">
+                </div> <br>
+                <div class="input-group">
+                    <label for="expenses">Essential Expenses:</label><br>
+                    <input type="number" id="expenses" placeholder="Enter your expenses">
+                </div><br>
+                <div class="input-group">
+                    <label for="savings">Savings Goal:</label><br>
+                    <input type="number" id="savings" placeholder="Enter your savings goal">
+                </div><br>
+                
+                <!-- Currency Selector -->
+                <div class="input-group">
+                    <label for="currency">Choose Currency:</label>
+                    <select id="currency" style=" border:1px solid rgb(119, 113, 113)">
+                        <option value="USD" selected>USD - $</option>
+                        <option value="EUR">EUR - €</option>
+                        <option value="GBP">GBP - £</option>
+                    </select>
+                </div>
+
+                <button id="calculate-btn">Calculate</button>
+                                               <!-- kjo calculate eshte vetem nje preview i cili tregon se per qfare behet ne faqe fjale me saktesisht -->
+                <br> 
+                
+                <div id="result" class="result">
+                    <h2>Budget Breakdown</h2>
+                    <p id="remaining-text">Remaining Balance: <span id="remaining"></span></p>
+                    <p id="savings-text">Savings Achievable: <span id="savings-amount"></span></p>
+                </div>
+            </div>
+            
+            <!-- Calculation History -->
+            <div class="history">
+                <h2 style="color:#008080">Calculation History</h2>
+                <div id="history-list">
+                    <!-- History rows will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Calculate.js"></script>
+
+    <!-- end calculation section  -->
+
+
+   <!-- arrows -->
+<div class="arrow-container">
+    <!-- Arrow Icon for toggling the message -->
+    <div class="arrow" id="arrow">
+        &#x25C0; <!-- Unicode for left arrow -->
+    </div>
+</div>
+
+
+<!-- Warning Message that will slide in -->
+<div class="warning" id="warning">
+    <p style="color:Black; font-size:150% ;font-weight: bolder; display: inline;">NOTE!:</p>
+    <span style="display: inline;color:black; font-size: 120%; font-weight: 800;">
+        The "Calculate" site is only for non-registered users, and all history will not be saved. 
+        Click here to get 
+    </span>
+    <a href="register.html" style="font-weight: bolder; font-size: 175%; color: white">REGISTERED!</a>
+</div>
+
+<script src="js/Calculate.js"></script>
+<!-- end arrows -->
+
+
+
+<!-- green div 2 -->
+    <div id="fifth-section">
+        <p class="pa-4"> Experience the best in <br> personal finance </p>
+         <br>
+         <p class="pa-4-1"> Sign up for free and see how MySavingsPal can <br> help your take control of your finance</p>
+    
+        <a href="register.html"><button class="my-button4"> <span style="font-weight: bold; font-size:20px;">Sign Up</span></button> </a> 
+
+        <img src="images/people.jpg" class="people">
+     </div> 
+    <!-- end green div 2 -->
+
+    
+    <br><br><br><br><br><br>
+  
+
+
+    <!-- try it for free -->
+        <p class="pa-5"> Try it for free </p>
+        <br>
+        <p class="pa-5-1"> No Credit Card Required!</p>
+    
+       <a href="register.html"><button class="my-button5"> <span style="font-weight: bold; font-size:20px;">Start</span></button> </a>
+    <div style="margin-top: -30px;   width: 400px;  height: 40px; margin-left: 10px;">
+      <a href="Contact.html"><button class="my-button6"> <span style="font-weight: bold; font-size:20px;">Contact Us</span></button> </a>
+    </div>
+    <br>
+<!-- try it for free end -->
+
+
+<br> <br> <br> <br>  
+
+
+
+
+<!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <h1>MySavingsPal</h1>
+                <div style="margin-top:-25px "> <h6  id="h6"> This website helps u to Calculate <br>your Expenses and Savings </h6>  </div>
+                
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a> 
+                <a href="Calculate.html">Calculate</a>
+                <a href="About.html">About</a>
+                <a href="Service.html">Services</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="footer-buttons">
+                <a href="login.html"><button id="login">Login</button> </a><br>
+                <a href="register.html"><button id="register" >Register</button></a>
+            </div>
+        </div>
+    
+        <div id="last-div">  
+            <p id="last-p"> © Copyright 2024 MySavingPal. All rights reserved.</p>  
+            <p id="last-p1"> Developed by  <a href="https://fatlindportfolio.click/" class="portfolio-link">Fatlind Hamza.</a></p>
+        </div>
+    </footer>
+    <br>
+ <!-- fotter end -->
+
+
+
+</body>
+</html>
+   
+
+
+
+

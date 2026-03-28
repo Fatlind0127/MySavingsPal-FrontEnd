@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - UserPage</title>
+        <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+   <!--E gjitha kjo eshte e bere copy paste pre non user login contact e e bere paste ketu perveq navbarit i cili eshte i modifikuar me droplist
+  dhe eshte i ndertuar nga nje funksion qe te merr te dhena ne local storage dhe te vendosura ne nav bar si psh username display  -->
+
+  <!-- NavBar starts -->
+  <nav class="navbar">
+    <div class="navbar-container">
+        <h1 class="navbar-brand"> <a href="../userPage.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+        <ul class="navbar-menu">
+            <li><a href="../userPage.html">Home</a></li>
+            <li><a href="AboutUP.html">About</a></li>
+            <li><a href="ServicesUP.html">Services</a></li>
+            <li><a href="ContactUP.html" style="font-weight: bolder; font-size: larger;">Contact</a></li>
+              <div class="sidebar">
+                <div class="dropdown">
+                  <button class="dropdown-button" id="userInfo"><span id="usernameDisplay"></span></button>
+                  <div class="dropdown-content">
+                      <a href="Budgets.html">Budgets</a>
+                      <a href="Expenses.html">Expenses</a>
+                      <a href="Savings.html">Savings</a>
+                      <a href="MyAcc.html">Account</a>
+                      <a  id="logout-button">Log Out</a>
+                  </div>
+              </div>     
+         </div>
+        </div>
+   </nav>
+<script src="Js/contact.js"></script>
+<!-- navbar end -->
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+ <!-- CONTACT -->
+ <div class="new_home_web">
+  <div class="responsive-container-block big-container">
+    <img class="imgBG" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw65.png">
+    <div class="responsive-container-block textContainer">
+      <div class="topHead">
+        <p class="text-blk heading">
+          Get in
+          <span class="orangeText">
+            touch
+          </span>
+        </p>
+        <div class="orangeLine" id="w-c-s-bgc_p-2-dm-id"></div>
+      </div>
+      <p class="text-blk subHeading">
+        "Contact us for inquiries, suggestions, or support! Our form helps you connect with us quickly and easily."
+      </p>
+    </div>
+    <div class="responsive-container-block container">
+      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b">
+        <form class="form-box" id="contactForm" action="https://formspree.io/f/xqakalel" method="POST">
+          <div class="container-block form-wrapper">
+            <div class="responsive-container-block">
+              <div class="left4">
+                <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-2">
+                  <input class="input" id="ijowk-2" name="name" required placeholder="First Name">
+                </div>
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                  <input class="input" id="indfi-2" name="Last Name" placeholder="Last Name">
+                </div>
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                  <input class="input" id="ipmgh-2" name="email" type="email" required placeholder="Email Address">
+                </div>
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 lastPhone">
+                  <input class="input" id="imgis-2" name="number" type="tel" required placeholder="Phone Number">
+                </div>
+              </div>
+              <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-2">
+                <textarea class="textinput" id="i5vyy-2" name="message" required placeholder="Message"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="send" id="w-c-s-bgc_p-1-dm-id">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end contact -->
+
+
+ <div style="height: 50px;"></div>
+
+
+
+ <!-- footer -->
+ <footer id="about-alt-footer">
+  <p>© 2025 My Savings Pal. All rights reserved.</p>
+</footer>
+
+   
+</body>
+</html>

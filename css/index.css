@@ -1,0 +1,1400 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Initial state: object is hidden */
+.animate {
+    opacity: 0;
+    transform: translateY(-20px); /* Move the object up */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Animated state: object becomes visible */
+  .animate.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/*Scrollbar*/
+body::-webkit-scrollbar {
+    width: 16px; 
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #008080; 
+    border-radius: 10px; 
+    border: 3px solid #f1f1f1; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #005f5f; 
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0px;
+    box-shadow: -5px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    z-index: 100;
+    border-radius: 30px;
+    transition: all 0.3s ease; 
+}
+
+.navbar:hover {
+    transition: all 0.4s ease;
+    margin-bottom: 15px; 
+    box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.2); 
+
+}
+
+.navbar.smaller {
+    padding: 10px 0px;
+    margin-top: 10px;
+    box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 70%;
+}
+
+
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.navbar-brand {
+    color:#008080;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.1); 
+    
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #000;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+}
+
+#loginstyle {
+    border: 1px solid none; 
+    width:80px;
+    margin-top: -5px; 
+    margin-right: -45px;
+    height: 35px;          
+    border-radius: 12px;
+    font-size:125%; 
+    padding-top:9px; 
+    padding-left: 10px;
+    font-weight: bold;           
+    box-shadow: -3px 5px 15px 3px rgba(0, 0, 0, 0.2); 
+    background-color: #f3f3f3; 
+    font-family:'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, transform 0.3s ease-in;
+
+}
+#loginstyle:hover {
+    background-color: #FFFFFF; /* Darker teal on hover */
+    color: #2C3E50 ;
+    transform: scale(1.05); /* Slightly enlarge the button */
+
+}
+
+#registerstyle {
+    color: white;
+    border: 1px solid #008080; 
+    width:120px;
+    text-align: center; 
+    margin-top: -9.5px; 
+    height: 40px;          
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size:130%; 
+    padding-top:12px; 
+    padding-right: 10px;font-weight: bold;           
+    box-shadow: -3px 5px 15px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #008080; 
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, transform 0.3s ease-in;
+
+}
+#registerstyle:hover {
+    background-color: #005f5f; 
+    transform: scale(1.05);
+}
+
+
+/* Header structures's style */
+
+#header-div {
+  
+    width:900px;
+    height:800px;
+    margin-top: 100px;
+    margin-left: 125px;
+    border-radius: 25px;
+    background-color:#005f5f;
+    border: 1px solid #005f5f;
+    box-shadow: 10px 10px 10px 0.5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in;
+}
+
+.pa-1 {
+    color: white;
+    font-size: 250%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 150px;
+    padding-top: 150px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.5); 
+}
+
+.pa-2 {
+    color: white;
+    font-size:24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 150px;
+    padding-top: 100px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.5); 
+    
+}
+
+.my-button {
+    width: 400px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 145px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #2C3E50 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.my-button:hover {
+    color: black;
+    background-color:#FFFFFF;
+    
+    transform: translateY(-2px);
+}
+
+.my-button:active {
+    transform: translateY(0);
+}
+
+.savings-pig {
+   margin-top: -700px;
+   margin-left: 800px;
+   width: 450px;
+   height:450px;
+}
+.responsive-image {
+    max-width: 100%; 
+    height: auto; 
+  
+}
+
+.man-pc {
+    margin-top:-400px;
+    margin-left: 1250px;
+    width: 500px;
+    height: 500px;
+}
+.explore-analystics {
+    width: 300px;
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 1350px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #008080;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-analystics:hover {
+    color: white;
+    background-color:#005f5f;
+    
+    transform: translateY(-2px);
+}
+
+.explore-analystics:active {
+    transform: translateY(0);
+}
+
+/* Third island in page style */
+
+.mysavingspal-logos {
+    width:1700px;
+    height:300px;
+    margin-top: 200px;
+    margin-left: 125px;
+    border-radius: 25px;
+    background-color:white;
+    border: 1px solid white;
+    box-shadow: 10px 10px 10px 0.5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in;
+}
+
+
+ /* 4th section */
+
+ #fourth-section {
+    width:1700px;
+    height:600px;
+    margin-top: 150px;
+    margin-left: 125px;
+    border-radius: 25px;
+    background-color:#005f5f;
+    border: 1px solid #005f5f;
+    box-shadow: 10px 10px 10px 0.5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in;
+}
+
+.pa-1-2 {
+    color: white;
+    font-size: 250%;
+    padding-left: 625px;
+    padding-top: 75px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.5); 
+}
+
+.pa-2-2 {
+    color: white;
+    font-size:24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 550px;
+    padding-top: 00px;
+    font-weight: 500;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.5); 
+    
+}
+
+
+.my-button2 {
+    width: 400px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 625px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #2C3E50 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.my-button2:hover {
+    color: black;
+    background-color:#FFFFFF;
+    
+    transform: translateY(-2px);
+}
+
+.my-button2:active {
+    transform: translateY(0);
+}
+
+
+
+ 
+@keyframes outline {
+    0% { text-shadow: 0 0 5px black; }
+    100% { text-shadow: 0 0 20px black; }
+}
+.outline {
+    animation: outline 2s infinite;
+}
+
+.span-logos {
+    color:#005f5f;
+    font-size:25px;
+    padding-left: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 1px black;
+}
+
+
+/* pig div text */
+.pig-div-txt {
+    margin-top:-500px;
+    margin-left: 900px;
+    width:700px;
+    height: 400px;
+}
+
+.learn-more {
+    width: 300px;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #008080;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more:hover {
+    color: white;
+    background-color:#005f5f;
+    
+    transform: translateY(-2px);
+}
+
+.learn-more:active {
+    transform: translateY(0);
+}
+
+
+/* ideas */
+.ideas {
+    margin-top:150px;
+    margin-left: 250px;
+    width:700px;
+    height: 400px;
+}
+
+.ideas-logo {
+    margin-top: -550px;
+    margin-left: 950px;
+}
+
+
+.pa-3 {
+    color: #008080;
+    font-size: 300%;
+    padding-left: 525px;
+    padding-top: 150px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.3); 
+}
+
+.pa-2-1 {
+    color: black;
+    font-size:24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 600px;
+    padding-top: -250px;
+    font-weight: 400;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.2); 
+    
+}
+
+.my-button3 {
+    width: 400px;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 750px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #2C3E50 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.my-button3:hover {
+    color: white;
+    background-color:#008080;
+    
+    transform: translateY(-2px);
+}
+
+.my-button3:active {
+    transform: translateY(0);
+}
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+
+/* feedback rating users */
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 50px;
+    width:80%;
+    height: auto;
+    margin-left: 150px;
+    margin-top: 150px;
+  }
+  
+  .review {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .stars {
+    font-size: 20px;
+    color: #ffcc00;
+  }
+  
+  .review-text {
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0;
+  }
+  
+  .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .author span {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  
+
+/* fifth section  */
+
+#fifth-section {
+   
+    width:1700px;
+    height:600px;
+    margin-top: 100px;
+    margin-left: 125px;
+    border-radius: 25px;
+    background-color:#005f5f;
+    border: 1px solid #005f5f;
+    box-shadow: 10px 10px 10px 0.5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in;
+}
+
+.pa-4 {
+    color: white;
+    font-size: 250%;
+    padding-left: 225px;
+    padding-top: 75px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.5); 
+}
+
+.pa-4-1 {
+    color: white;
+    font-size:24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 225px;
+    padding-top: -200px;
+    font-weight: 400;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.5); 
+    
+}
+
+
+.my-button4 {
+    width: 400px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 225px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white ;
+    color: #2C3E50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.my-button4:hover {
+    color: white;
+    background-color:#2C3E50;
+    
+    transform: translateY(-2px);
+}
+
+.my-button4:active {
+    transform: translateY(0);
+}
+
+
+.imgdiv5 {
+     margin-top: -200px;
+     margin-left: 900px;
+}
+
+.people {
+    width: 600px;
+    height: 400px;
+    margin-top: -500px;
+     margin-left: 900px;
+     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* social logos to connect  */
+
+.container1 {
+    margin-top:50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Text Section */
+.text-section1 {
+    max-width: 40%;
+}
+
+.text-section1 h1 {
+    margin-top:50px;
+    font-size: 3rem;
+    color: #01796f;
+    margin-bottom: 20px;
+}
+
+.text-section1 p {
+    padding-top:35px;
+    font-size: 1.50rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.text-section1 button {
+    margin-top:150px;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    background-color: #01796f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-section1 button:hover {
+    background-color: #015c50;
+}
+
+/* Icons Section */
+.icons-container {
+    display: flex;
+    gap: 125px; /* Space between the two icon columns */
+}
+
+.icon-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each icon in the column */
+}
+
+.icon img {
+    /* Let images retain their original sizes */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+
+/* try it */
+
+.text-section1 button {
+    background-color: #008080;;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-section1 button:hover {
+    background-color:#005f5f;
+}
+
+.icons-section1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+
+.icon img {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.icon img:hover {
+    background-color: #ccc;
+}
+
+.pa-5 {
+    color: #008080;
+    font-size: 300%;
+    padding-left: 790px;
+    padding-top: 0px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.3); 
+}
+
+.pa-5-1 {
+    color: black;
+    font-size:24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 818px;
+    padding-top: -250px;
+    font-weight: 400;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0,0.2); 
+    
+}
+
+.my-button5 {
+    width: 400px;
+    height: 40px;
+    margin-top: 100px;
+    margin-left: 500px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #2C3E50 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.my-button6 {
+    margin-top: -300px;
+    width: 400px;
+    height: 40px;
+    margin-left: 1050px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #2C3E50 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.my-button5:hover {
+    color: white;
+    background-color:#008080;
+    
+    transform: translateY(-2px);
+}
+
+.my-button5:active {
+    transform: translateY(0);
+}
+
+
+.my-button6:hover {
+    color: white;
+    background-color:#008080;
+    
+    transform: translateY(-2px);
+}
+
+.my-button6:active {
+    transform: translateY(0);
+}
+
+/* fotter */ 
+
+
+footer {
+    background-color: #005f5f; 
+    box-shadow: -5px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 25px 50px;
+    position: relative;
+    width: 85%;
+    height:175px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+footer:hover {
+    box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.2); 
+transition: all 0.5s ease; 
+}
+
+footer.smaller {
+    padding: 10px 0px;
+    margin-top: 10px;
+    box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    
+}
+
+.footer-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.logo h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    gap:10px;
+    width: 100px;
+    font-size: 23px;
+}
+
+.footer-links a:hover {
+    color:  white;
+    font-size: 170%;
+    text-shadow: 2px 6px 8px rgba(0, 0, 0, 0.85);
+}
+
+.footer-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login {
+    background-color: white;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    color: #333;
+    font-weight: 900;
+    width: 300px;
+    margin-top: 0px;
+}
+
+#login:hover {
+    background-color: #2C3E50 ;
+    color:white;
+    size: 125%;
+}
+
+#register {
+    background-color: #01796f;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 25px;
+    font-weight: 900;
+    width: 300px;
+}
+
+#register:hover {
+    background-color: white;
+    color : black;
+}
+
+
+#h6 {
+    font-size: large;
+    color: white;
+    font-weight: 300;
+    padding-left: 50px;
+    text-align: left;
+
+}
+
+#last-p {
+    color:#2C3E50 ;
+    font-size: 125%;
+}
+
+#last-div {
+    margin-left: -50px;                                                      
+    margin-top: 60px;
+    width: 600px ;
+    height:50px;
+}
+
+#last-p1 {
+    padding-left:1150px;                                                      
+    margin-top: -50px;
+    color:#2C3E50 ;
+    font-size: 125%;
+    width: 500px ;
+    height:50px;
+
+}
+
+.portfolio-link {
+    color:#2C3E50; 
+    text-decoration: none;
+}
+
+.portfolio-link:hover {
+    color:black;
+    text-decoration: underline;
+    font-size: 125%;
+}
+
+
+
+    
+/* Responsive nav bar */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        width: 90%;
+    }
+
+    .navbar.smaller {
+        width: 85%;
+    }
+
+    .navbar-brand {
+        font-size: 24px; 
+    }
+
+    .navbar-menu {
+        display: none; 
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 0;
+        flex-basis: 100%;
+        order: 3;
+        margin-top: 12px;
+        padding: 16px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .navbar-menu.active {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    .navbar-menu a {
+        font-size: 18px; 
+    }
+
+    #loginstyle,
+    #registerstyle {
+        margin-right: 0 !important;
+        margin-top: 4px !important;
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 20px; 
+    }
+
+    .navbar-menu a {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 15px 0px;
+    }
+}
+
+/* Responsive end */
+
+/* ---------- Homepage layout: scales down without changing desktop look above breakpoints ---------- */
+@media (max-width: 1800px) {
+    #fourth-section,
+    #fifth-section,
+    .mysavingspal-logos {
+        width: min(1700px, calc(100% - 48px));
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1500px) {
+    #header-div {
+        width: min(900px, calc(100% - 40px));
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        min-height: 560px;
+        padding-bottom: 32px;
+    }
+
+    #header-div > div[style*="margin-left"] {
+        margin-left: clamp(16px, 5vw, 100px) !important;
+    }
+
+    .pa-1 {
+        padding-left: clamp(24px, 10vw, 150px);
+        padding-top: clamp(48px, 12vw, 150px);
+        font-size: clamp(1.75rem, 4vw, 250%);
+    }
+
+    .pa-2 {
+        padding-left: clamp(24px, 10vw, 150px);
+        padding-top: clamp(32px, 6vw, 100px);
+    }
+
+    .my-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: min(400px, calc(100% - 48px));
+    }
+
+    .savings-pig {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: min(450px, 88vw);
+        height: auto;
+    }
+
+    .man-pc {
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: min(500px, 92vw);
+        height: auto;
+    }
+
+    .analystics {
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    .explore-analystics {
+        margin-left: auto !important;
+        margin-right: auto;
+    }
+
+    .mysavingspal-logos > div[style*="margin-left"] {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+
+    .mysavingspal-logos > div:nth-child(2) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+
+    div[style*="images/bg.jpg"] {
+        height: auto !important;
+        min-height: 1000px;
+        padding-bottom: 48px !important;
+        margin-top: 60px !important;
+    }
+
+    .animate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animate > img,
+    .animate .ideas-logo,
+    .animate .tablet {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 24px !important;
+        max-width: min(550px, 92vw) !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .pig-div-txt,
+    .ideas {
+        margin-top: 1.5rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: min(700px, 92vw) !important;
+        height: auto !important;
+        text-align: center;
+    }
+
+    .ideas-logo {
+        margin-top: 1rem !important;
+        margin-left: auto !important;
+    }
+
+    .pig-div-txt > div[style*="border-bottom"] {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: min(500px, 90%) !important;
+    }
+
+    .learn-more {
+        margin-left: auto !important;
+        margin-right: auto;
+        display: block;
+    }
+
+    #fourth-section img[style*="margin-left"] {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+    }
+
+    .pa-1-2,
+    .pa-2-2 {
+        padding-left: clamp(16px, 6vw, 625px);
+        padding-right: 16px;
+        text-align: center;
+    }
+
+    .my-button2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pa-3,
+    .pa-2-1 {
+        padding-left: clamp(16px, 5vw, 525px);
+        padding-right: 16px;
+        text-align: center;
+        font-size: clamp(1.5rem, 5vw, 300%);
+    }
+
+    .pa-2-1 {
+        font-size: clamp(1rem, 2.5vw, 24px);
+    }
+
+    .my-button3 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+        width: min(90%, calc(100% - 32px));
+        margin-left: auto;
+        margin-right: auto;
+        padding: 32px 20px;
+    }
+
+    .review {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .pa-4,
+    .pa-4-1 {
+        padding-left: clamp(20px, 6vw, 225px);
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .pa-4 {
+        font-size: clamp(1.75rem, 4vw, 250%);
+    }
+
+    .my-button4 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .people {
+        display: block;
+        margin: 1.5rem auto 0;
+        margin-top: 1.5rem !important;
+        margin-left: auto !important;
+        width: min(600px, 92vw) !important;
+        height: auto !important;
+        max-width: 100%;
+    }
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px;
+    }
+
+    .text-section1 {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .text-section1 h1 {
+        font-size: clamp(1.75rem, 5vw, 3rem);
+    }
+
+    .text-section1 p {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    .text-section1 button {
+        margin-top: 48px;
+    }
+
+    .icons-container {
+        gap: 48px;
+        justify-content: center;
+    }
+
+    .pa-5,
+    .pa-5-1 {
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: center;
+    }
+
+    .pa-5 {
+        font-size: clamp(1.75rem, 5vw, 300%);
+    }
+
+    .my-button5,
+    .my-button6 {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 16px !important;
+        width: min(400px, calc(100% - 32px)) !important;
+    }
+
+    .animate div[style*="width: 400px"] {
+        width: 100% !important;
+        max-width: 420px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 12px !important;
+    }
+
+    footer {
+        width: min(85%, calc(100% - 24px));
+        height: auto;
+        min-height: 160px;
+        padding: 24px 20px 32px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .footer-links a {
+        margin: 0 6px;
+    }
+
+    #h6 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #last-div {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    #last-p1 {
+        padding-left: 0 !important;
+        margin-top: 12px !important;
+        width: 100% !important;
+        max-width: 100%;
+        text-align: center;
+        height: auto;
+    }
+
+    #login,
+    #register {
+        width: min(300px, 100%);
+    }
+}
+
+@media (max-width: 900px) {
+    swiper-slide {
+        width: 260px !important;
+        height: 260px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-brand {
+        font-size: 1.15rem;
+    }
+
+    .span-logos {
+        display: inline-block;
+        padding: 6px 10px;
+        font-size: clamp(1rem, 4vw, 25px);
+    }
+
+    .mysavingspal-logos {
+        height: auto;
+        min-height: 240px;
+        padding-bottom: 24px;
+    }
+
+    div[style*="images/bg.jpg"] {
+        min-height: auto !important;
+    }
+
+    .my-button,
+    .my-button2,
+    .my-button3,
+    .my-button4,
+    .my-button5,
+    .learn-more {
+        width: min(100%, 360px) !important;
+    }
+
+    .explore-analystics {
+        width: min(100%, 320px) !important;
+    }
+}
+
+
+
+

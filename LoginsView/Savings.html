@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <title>Savings - MySavingPal</title>
+    <link rel="stylesheet" href="css/Savings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">   <!--google fonts-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-brand"> <a href="../userPage.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+            <ul class="navbar-menu">
+                <li><a href="../userPage.html">Home</a></li>
+                <li><a href="AboutUP.html">About</a></li>
+                <li><a href="ServicesUP.html" >Services</a></li>
+                <li><a href="ContactUP.html" >Contact</a></li>
+                  <div class="sidebar">
+                    <div class="dropdown">
+                      <button class="dropdown-button" id="userInfo"><span id="usernameDisplay"></span></button>
+                      <div class="dropdown-content">
+                          <a href="Budgets.html" >Budgets</a>
+                          <a href="Expenses.html" >Expenses</a>
+                          <a href="Savings.html" style="font-weight: bolder; font-size: larger;">Savings</a>
+                          <a href="MyAcc.html">Account</a>
+                          <a  id="logout-button">Log Out</a>
+                      </div>
+                  </div>     
+             </div>
+            </div>
+       </nav>
+       <script src="Js/Budgets.js"></script>
+    <!-- navbar ends -->
+
+
+       <br> <br> <br><br><br><br><br><br><br><br><br>
+
+
+    <!-- pjesa e kontentit i cili paraqet te gjitha te dhenat per kursime -->
+       <main class="savings-container">
+        <!-- Header Section -->
+        <section class="savings-header">
+            <h1>My Savings Dashboard</h1>
+            <p>Track and manage your savings effectively</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="savings-overview">
+            <div class="overview-card">
+                <h3>Total Savings</h3>
+                <p id="total-savings" class="overview-amount">$0</p>
+            </div>
+            <div class="overview-card">
+                <h3>Monthly Goal</h3>
+                <p id="monthly-goal" class="overview-amount">$0</p>
+            </div>
+            <div class="overview-card">
+                <h3>Progress</h3>
+                <p id="savings-progress" class="overview-amount">0%</p>
+            </div>
+        </section>
+
+        <!-- Visualization Section -->
+        <section class="savings-visualization">
+            <h2>Savings Distribution</h2>
+            <div class="chart-container">
+                <canvas id="savingsPieChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Add Savings Section -->
+        <section class="savings-add">
+            <h2>Add New Savings</h2>
+            <form id="add-savings-form" class="form-grid">
+                <div class="form-group">
+                    <label for="savings-category">Category:</label>
+                    <input type="text" id="savings-category" name="savings-category" placeholder="e.g., Emergency Fund" required>
+                </div>
+                <div class="form-group">
+                    <label for="savings-amount">Amount:</label>
+                    <input type="number" id="savings-amount" name="savings-amount" placeholder="$" required>
+                </div>
+                <div class="form-group">
+                    <label for="savings-goal">Goal:</label>
+                    <input type="number" id="savings-goal" name="savings-goal" placeholder="$" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Savings</button>
+            </form>
+        </section>
+
+        <!-- Detailed Savings Section -->
+        <section class="savings-details">
+            <h2>Detailed Savings</h2>
+            <table class="savings-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Goal</th>
+                        <th>Progress</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="savings-rows">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="savings-tips">
+            <h2>Financial Tips</h2>
+            <ul>
+                <li>Set realistic savings goals to stay motivated.</li>
+                <li>Review your expenses regularly to find more ways to save.</li>
+                <li>Automate your savings to build consistency.</li>
+            </ul>
+        </section>
+    </main>
+    <footer id="about-alt-footer">
+        <p>© 2025 My SavingsPal. All rights reserved.</p>
+      </footer>
+    
+      <script src="Js/Savings.js"></script>
+
+
+</body>
+</html>

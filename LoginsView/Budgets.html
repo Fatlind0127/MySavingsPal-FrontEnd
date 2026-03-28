@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <title>Budgets - MySavingPal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">   <!--google fonts-->
+    <link rel="stylesheet" href="css/Budgets.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+     <!-- NavBar starts -->
+  <nav class="navbar">
+    <div class="navbar-container">
+        <h1 class="navbar-brand"> <a href="../userPage.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+        <ul class="navbar-menu">
+            <li><a href="../userPage.html">Home</a></li>
+            <li><a href="AboutUP.html">About</a></li>
+            <li><a href="ServicesUP.html" >Services</a></li>
+            <li><a href="ContactUP.html" >Contact</a></li>
+              <div class="sidebar">
+                <div class="dropdown">
+                  <button class="dropdown-button" id="userInfo"><span id="usernameDisplay"></span></button>
+                  <div class="dropdown-content">
+                      <a href="Budgets.html" style="font-weight: bolder; font-size: larger;">Budgets</a>
+                      <a href="Expenses.html">Expenses</a>
+                      <a href="Savings.html">Savings</a>
+                      <a href="MyAcc.html">Account</a>
+                      <a  id="logout-button">Log Out</a>
+                  </div>
+              </div>     
+         </div>
+        </div>
+   </nav>
+  <script src="Js/Budgets.js"></script>
+  <!-- end navbar -->
+
+
+   <br><br><br><br><br><br><br><br><br><br><br>
+
+ 
+
+<!-- content -->
+<div class="container1">
+    <div class="card">
+        <div class="card-header">Total Your Budget</div>
+        <div class="card-body">
+            <p id="total-budget" class="total-budget">Remaining Budget: $0</p>
+        </div>
+    </div> <br> <br>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-header">Income</div>
+            <div class="card-body">
+                <input type="number" id="income-input" placeholder="Enter Income">
+                <select id="income-category">
+                    <option value="salary">Salary</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="other">Other</option>
+                </select>
+                <button class="button" onclick="addIncome()">Add Income</button>
+            </div>
+        </div>
+                             <!-- E gjitha kjo eshte funksionale prej javascript i cili kalkulon te dhena merr dhe ruan perkohesisht-->
+        <div class="card">
+            <div class="card-header">Expenses</div>
+            <div class="card-body">
+                <input type="number" id="expense-input" placeholder="Enter Expense">
+                <select id="expense-category">
+                    <option value="food">Food</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select>
+                <button class="button" onclick="addExpense()">Add Expense</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Savings</div>
+            <div class="card-body">
+                <input type="number" id="savings-input" placeholder="Enter Savings">
+                <select id="savings-category">
+                    <option value="emergency">Emergency</option>
+                    <option value="investment">Investment</option>
+                    <option value="other">Other</option>
+                </select>
+                <button class="button" onclick="addSavings()">Add Savings</button>
+            </div>
+        </div>
+    </div> <br>
+
+    <div class="chart-container">
+        <canvas id="budget-chart"></canvas>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Income</th>
+                <th>Category</th>
+                <th>Expenses</th>
+                <th>Category</th>
+                <th>Savings</th>
+                <th>Category</th>
+                <th>Remaining Budget</th>
+            </tr>
+        </thead>
+        <tbody id="transaction-history">
+            <!-- Transactions will be added here -->
+        </tbody>
+    </table>
+</div>
+<!-- end all content -->
+
+
+
+<!-- footer -->
+<footer>
+    &copy; 2025 MySavingsPal. All rights reserved.
+</footer>
+
+
+
+    <script src="Js/Budgets1.js"></script>
+
+
+</body>
+</html>

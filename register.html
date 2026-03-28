@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>Register - MySavingPal</title>
+  <link rel="stylesheet" href="css/Register.css">
+</head>
+<body>
+  
+
+    <!-- register formi per te derguar te dhena ne local storage dhe pastaj per tu bere login -->
+  <div id="registerForm"  class="container">
+    <div class="logo">MySavingsPal</div>
+    <p style="font-size: larger; margin-left: 140px;"> Register</p>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="name" placeholder="Enter Name" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="surname" placeholder="Enter Surname" name="lastName"required>
+        </div>
+        <div class="form-group">                                      <!-- te gjitha keto inpute dergojn vlera ne local storage dhe i ruajne ato permes javascript -->
+            <label for="email">Email</label>
+           <input type="email" id="email" placeholder="Enter Email" name="email"  required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="birthDate" name="date"required>
+        </div>
+        <div class="form-group checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">By registering an account, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy</a></label>
+        </div>
+        <button type="submit" class="btn">Continue</button>
+    </form>
+    <div class="signin">
+        <p>Already have an account? <a href="login.html" id="S1">Sign In</a></p>
+        <a href="index.html"  id="a1"> Back to Home</a> 
+    </div>
+</div>
+<!-- register form end -->
+<script src="js/Register.js"></script>
+  
+  </body>
+</html>

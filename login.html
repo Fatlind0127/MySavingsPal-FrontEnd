@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>Log In - MySavingPal</title>
+  
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <!--  struktura e login page, e cila me ndihmen e javascriptit na lejon qe te futemi ne web si user duke marrur te dhenat nga local storage 
+    dhe e sturkturuar me inpute te cilat qojn vlera ne local storage dhe me autentifikim te accountit neve na lejohet me u fut ne web
+    nje perparsi te madhe qe e ka kjo eshte qe nese le bere log in dhe pastaj je bere logout dhe je derguar ne homepage pastaj ke tentuar ta besh back
+     sessioni nuk lejon qe te futesh ne account perseri pa u bere login edhe nje here  -->
+<div class="login-container" style="display: block;">
+  <div class="logo">
+      <p style="text-align: center; color:#008080; font-size: 200%; font-weight: 600;">MySavingPal</p>
+     
+  
+  </div>
+  <h2>Sign in to your account</h2>
+
+  <!-- forma -->
+  <form id="loginForm"  class="login-form" >
+      <label for="email">UserName or Email address:</label>
+
+      <input type="text" id="loginIdentifier" placeholder="Enter Username or Email" required>
+      
+      <label for="password">Password:</label>
+      <div class="password-container">
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>       <!--te gjitha keto inpute kane id the type  -->
+      </div>                                                                                    <!--TE CILAT KRYEJNE FUNKSIONE PER TU LOGUAR -->
+      
+      <div class="extra-options">
+          <a href="ForgotPassword.html" style="color:#008080" id="F1">Forgot password?</a>
+      </div>
+      <button type="submit" class="login-btn">Sign In</button>
+  </form>
+  <!-- form end -->
+
+  <!-- KYQJA NE WEB NEPERMJET GOOGLE GMAIL -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <div id="g_id_onload"
+       data-client_id="522781391099-2jdrehf66d9o1jkrlmp2k9vj14ff08sj.apps.googleusercontent.com"                             
+       data-callback="handleCredentialResponse">
+  </div>                                           <!-- google gmail login eshte e bere me nje server nga google cloud dhe eshte e gjitha funksionale-->
+  <!--GOOGLE GMAIL END -->
+
+
+  <!-- FOOTER I LOGINIT -->
+     <div class="signup-link">
+      <p>Don't have an account? <a href="register.html" style="color:#008080" id="R1">Register</a></p>
+  </div>
+    <div class="g_id_signin" data-type="standard"></div>
+  <div class="footer">
+      <div class="terms">
+          <a href="index.html" style="padding-left: 110px;" id="a1"> Back to Home</a> 
+           <p style="margin-left: 115px;"> Developed by  <a href="https://fatlindportfolio.click/" class="portfolio-link">Fatlind Hamza.</a></p>
+            <div id="success-message" style="display: none; color: green; padding-left: 75px; font-size: 120%;"></div>
+       </div>
+  </div>
+</div>  
+<!-- FOOTER I LOGINIT END -->
+
+
+<br>
+ <script src="js/login.js"></script>
+
+
+<br> <br> 
+
+
+ 
+
+
+
+
+</body>
+</html>
+
+
+
+  
+  

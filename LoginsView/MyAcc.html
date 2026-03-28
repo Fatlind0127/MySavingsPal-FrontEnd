@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAccount - User Page</title>
+    <link rel="stylesheet" href="css/MyAccount.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">   <!--google fonts-->
+</head>
+<body>
+
+ <!-- NavBar starts -->
+ <nav class="navbar">
+    <div class="navbar-container">
+        <h1 class="navbar-brand"> <a href="../userPage.html" style=" color:#008080;text-decoration: none;">MySavingsPal</a></h1>
+        <ul class="navbar-menu">
+            <li><a href="../userPage.html">Home</a></li>
+            <li><a href="AboutUP.html" >About</a></li>
+            <li><a href="ServicesUP.html" >Services</a></li>
+            <li><a href="ContactUP.html" >Contact</a></li>
+              <div class="sidebar">
+                <div class="dropdown">
+                  <button class="dropdown-button" id="userInfo"><span id="usernameDisplay"></span></button>
+                  <div class="dropdown-content">
+                      <a href="Budgets.html">Budgets</a>
+                      <a href="Expenses.html">Expenses</a>
+                      <a href="Savings.html">Savings</a>
+                      <a href="MyAcc.html"  style="font-weight: bolder; font-size: larger;">Account</a>
+                      <a  id="logout-button">Log Out</a>
+                  </div>
+              </div>     
+         </div>
+         <img src="../images/acclogo.png" alt="" style="width: 40px; height: 40px;">
+        </div>
+   </nav>
+   <!-- navbar ends -->
+   <script src="Js/MyAccount.js"></script>
+
+   <br> <br> <br><br><br><br><br><br><br><br><br>
+
+
+
+
+<!-- pjesa e dashboard e cila tregon se sa jane nivelet tua bugjetare dhe sa eshte progresi yyt  -->
+   <div class="user-dashboard" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
+    <!-- Hero Welcome Section -->
+    <section class="hero-welcome" style="text-align: center; margin-bottom: 50px;">
+        <div style="background: linear-gradient(135deg, #008080, #305a6e); padding: 50px; border-radius: 15px; color: white;">
+            <h1 style="font-size: 3rem; margin-bottom: 10px;">Welcome, <span class="user-name">[Emri]</span>!</h1>
+            <p style="font-size: 1.2rem;"> Welcome to your financial management dashboard.</p>
+            <a href="Budgets.html"><button style="margin-top: 20px; padding: 15px 30px; font-size: 1rem; color: white; background: #ff8c00; border: none; border-radius: 5px; cursor: pointer;">Shiko Raportet e Fundit</button></a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section" style="display: flex; gap: 30px; margin-bottom: 50px;">
+        <div class="overview-card" style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #008080;">General Balance</h2>
+            <p style="font-size: 2rem; font-weight: bold; color: #444;">€20,000</p>
+        </div>
+        <div class="overview-card" style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #008080;">This Month's Savings</h2>
+            <p style="font-size: 2rem; font-weight: bold; color: #444;">€1,200</p>
+        </div>
+        <div class="overview-card" style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #008080;">  This Month's Expenses</h2>
+            <p style="font-size: 2rem; font-weight: bold; color: #ff4d4d;">€800</p>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="goals-section" style="margin-bottom: 50px;">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #008080;">Your Financial Goals</h2>
+        <div style="display: flex; gap: 30px;">
+            <div class="goal-card" style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h3 style="color: #008080;">Buying a House</h3>
+                <p>Progres: 50%</p>
+                <progress value="50" max="100" style="width: 100%; height: 10px;"></progress>
+            </div>
+            <div class="goal-card" style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h3 style="color: #008080;"> Emergency Fund</h3>
+                <p>Progres: 70%</p>
+                <progress value="70" max="100" style="width: 100%; height: 10px;"></progress>
+            </div>
+            <div class="goal-card" style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                <h3 style="color: #008080;">Summer vacation</h3>
+                <p>Progres: 30%</p>
+                <progress value="30" max="100" style="width: 100%; height: 10px;"></progress>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Tips Section -->
+    <section class="financial-tips" style="margin-bottom: 50px;">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #008080;">  Advice on Finances</h2>
+        <div style="display: flex; gap: 20px;">
+            <div style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #ff8c00;">Analyze Expenses</h3>
+                <p>
+                  Understand where your money is going each month.</p>
+            </div>
+            <div style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #ff8c00;">Set Clear Goals</h3>
+                <p>Plan and save to achieve them.</p>
+            </div>
+            <div style="flex: 1; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #ff8c00;">Monitor Savings</h3>
+                <p>Make sure you are on the right track.</p>
+            </div>
+        </div>
+    </section>
+    <!--  dashboard end -->
+   
+<br><br> 
+
+<!-- kjo eshte pjesa ku kontrollohen te dhenat e accountit tend dhe jane te ndryshueshme nese te nevoitet -->
+    <p style="font-size:150%; text-align: center; font-weight: bolder;  color: #008080;">Here you have access premission to control your account data, and change them if you want!</p>
+
+   <div class="unique-sidebar-container">
+    <div class="unique-sidebar">
+      <ul class="unique-sidebar-menu">
+        <li data-section="username-section">Username</li>
+        <li data-section="name-section">Name</li>
+        <li data-section="surname-section">Surname</li>
+        <li data-section="email-section">Email</li>
+        <li data-section="password-section">Password</li>
+      </ul>
+    </div>
+  
+    <div class="unique-sidebar-content">
+      <div id="username-section" class="unique-section-content">
+        <label for="sidebar-username">Username:</label>
+        <input type="text" id="sidebar-username" value="" />
+      </div>
+  
+      <div id="name-section" class="unique-section-content">
+        <label for="sidebar-name">Name:</label>
+        <input type="text" id="sidebar-name" value="" />
+      </div>
+  
+      <div id="surname-section" class="unique-section-content">
+        <label for="sidebar-surname">Surname:</label>
+        <input type="text" id="sidebar-surname" value="" />
+      </div>
+  
+      <div id="email-section" class="unique-section-content">
+        <label for="sidebar-email">Email:</label>
+        <input type="email" id="sidebar-email" value="" />
+      </div>
+  
+      <div id="password-section" class="unique-section-content">
+        <label for="sidebar-password">Password:</label>
+        <input type="password" id="sidebar-password" value="" />
+      </div>
+  
+      <button id="save-sidebar-changes">Save Changes</button>
+    </div>
+  </div>  
+  <!-- account detail changeable end -->
+
+  <br><br><br><br>
+
+  <!-- footer -->
+  <footer class="dashboard-footer" style="background: #008080; color: white; text-align: center; padding: 20px; border-radius: 10px;">
+    <p>&copy; 2025 MySavingsPal. Të gjitha të drejtat janë të rezervuara.</p>
+    <div style="margin-top: 10px;">
+        <a href="Budgets.html" style="color: #ff8c00; margin: 0 10px; text-decoration: none;">Budgets</a>
+        <a href="Savings.html" style="color: #ff8c00; margin: 0 10px; text-decoration: none;">Savings</a>
+        <a href="Expenses.html" style="color: #ff8c00; margin: 0 10px; text-decoration: none;">Expenses</a>
+    </div>
+</footer>
+<!-- footer end -->
+ 
+    <script src="Js/MyAccount1.js"></script>  
+    <!--  ketu pjesa e scriptes eshte e ndare per arsye konflikti mes te dhenave te navbarit te cili i posedon 
+      myaccount.js  dhe jam detyruar ti ndaj per te funksionuar  ne my account1 .js -->
+</body>
+</html>
